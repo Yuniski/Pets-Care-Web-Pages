@@ -68,6 +68,24 @@ a {
     text-decoration: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .nav-menu {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        padding: 20px 5%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-menu .logo {
+        font-size: .8em;
+    }
+}
+
 /*Banner*/
 .banner {
     background: no-repeat center/cover url("../img/banner.jpg");
@@ -82,6 +100,23 @@ a {
 .banner .subtitle {
     font-size: 1.5em;
     padding-left: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .banner .title {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner .title {
+        font-size: 2em;
+    }
+
+    .banner .subtitle {
+        font-size: 1em;
+        padding-left: 0;
+    }
 }
 
 /*Main*/
@@ -103,6 +138,7 @@ a {
     text-align: center;
     font-size: 2em;
     color: var(--secondary-800);
+    letter-spacing: 1px;
 }
 
 .card {
@@ -133,8 +169,46 @@ a {
         width: 250px;
     }
 
-    .card .title {
+    .cards .title {
+        font-size: 2em;
+    }
+
+    .card-body {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 200px;
+    }
+
+    .cards .title {
         font-size: 1.5em;
+    }
+
+    .card-body {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .inner-container {
+        padding: 2em 0;
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 200px;
+        margin-bottom: 50px;
+    }
+
+    .cards .title {
+        font-size: 1.5em;
+    }
+
+    .card-body {
+        font-size: .8em;
     }
 }
 
@@ -154,7 +228,7 @@ a {
 }
 
 .section .image {
-    width: 500px;
+    width: 900px;
 }
 
 .section .image img {
@@ -174,9 +248,55 @@ a {
     padding-left: 4em;
 }
 
-.section.reverse 
-.image img {
+.section.reverse .image {
+    width: 600px;
+}
+
+.section.reverse .image img {
     box-shadow: 25px -30px var(--primary-200);
+}
+
+@media screen and (max-width: 1024px) {
+    .section .image {
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section .image,
+    .section.reverse .image {
+        width: 500px;
+        padding-bottom: 2em;
+    }
+
+    .section {
+        flex-direction: column !important;
+        padding: 3em 0;
+    }
+
+    .section.reverse {
+        padding-right: 0;
+    }
+
+    .section .text, .section.reverse .text {
+        padding: 0 3em;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section {
+        padding: 2em 0;
+        margin-top: -50px;
+    }
+
+    .section.reverse {
+        margin-top: 0;
+    }
+
+    .section .image img {
+        box-shadow: none !important;
+    }
 }
 
 /*Footer*/
@@ -206,13 +326,58 @@ footer {
 }
 
 .copyright {
-    padding-bottom: 2%;
-    font-size: 1.1rem;
-    font-weight: 500;
+    border-top: 1px solid var(--primary-200);
+    margin: 1em 5em 0;
+    padding: 1em 5em;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.social-media  {
+    padding-top: 1.5em;
 }
 
 .social-media .icon {
-    font-size: 2rem;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+    .social-media .icon {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sections {
+        padding: 2% 0 0;
+    }
+
+    footer {
+        font-size: .9em;
+    }
+
+    .copyright {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sections {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-2, .social-media, .address {
+        padding: 2em 0 1em;
+    }
+
+    .social-media .icon {
+        font-size: 2em;
+    }
+
+    .copyright {
+        margin: 1em 3em 0;
+        padding: 3em 0;
+    }
 }
 
 /* Botón Subir */
@@ -235,3 +400,18 @@ footer {
     color: var(--primary-800);
 }
 
+@media screen and (max-width: 500px) {
+    #btn-up {
+        background-color: var(--primary-800);
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        line-height: 40px;
+        text-align: center;
+    
+        position: fixed;
+        bottom: 20px;
+        right: 80px;
+    }
+}
