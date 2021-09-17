@@ -415,3 +415,67 @@ footer {
         right: 80px;
     }
 }
+ 
+/* Contacto */
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, .1fr); 
+}
+
+.input-field, .textarea {
+    padding: 1em 1em 0;
+}
+
+.input-field input, textarea {
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    padding: 5px 1em;
+    font-size: 12px;
+}
+
+textarea {
+    font-family: "Source Sans Pro", sans-serif;
+    width: 100%;
+}
+
+.btn {
+    padding: 1em;
+    text-align: right;
+}
+
+.btn button {
+    padding: 10px 2em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-500);
+    color: var(--secondary-200);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    font-size: .8em;
+    font-weight: 600;
+}
+
+.btn button:hover {
+    background-color: var(--primary-800);
+}
+
+#message {
+    display: none;
+    padding: 2em;
+}
+
+#message p:first-child {
+    border: 2px solid var(--primary-800);
+    border-radius: 5px;
+    padding: 1em;
+}
+
+#message p {
+    text-align: center;
+}
+
+#message .icon {
+    color: var(--primary-800);
+}

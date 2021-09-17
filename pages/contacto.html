@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/e2fbfca351.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <!--Nav-->
+    <nav class="nav-menu">
+        <div class="logo">
+            <a href="#">
+                <h1>Pets Care <i class="fas fa-paw"></i></h1>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#categorias">Categories</a>
+                </li>
+                <li>
+                    <a href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form -->
+    <main class="container">
+        <section class="form-section section">
+            <div>
+                <h1 class="title">Contacto</h1>
+            </div>
+            
+            <div class="form" id="my-form">
+                <form action="" method="POST">
+                    <div class="form-row">
+                        <div class="input-field input-name">
+                            <label for="nombre">Nombre</label>
+                            <br>
+                            <input type="text" name="nombre" placeholder="John Doe">
+                        </div>
+                        <div class="input-field input-email">
+                            <label for="email">Correo Electrónico</label>
+                            <br>
+                            <input type="email" name="email" placeholder="johndoe@mail.com">
+                        </div>
+                    </div>
+                    
+                    <div class="textarea">
+                        <label for="mensaje">Mensaje</label>
+                        <br>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Leave your message here"></textarea>
+                    </div>
+                    
+                    <div class="btn">
+                        <button type="submit" onclick="hide()">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="content" id="message">
+                <p>¡Gracias por contactarte con nosotros! <i class="far fa-check-circle icon"></i></p>
+                <br>
+                <p>En breve revisaremos tu mensaje...</p>
+            </div>
+        </section>
+    </main>
+        
+     <!--Footer-->
+     <footer class="footer">
+        <div class="sections">
+            <nav class="menu-2">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#categorias">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#" class="instagram icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="twitter icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="facebook icon"><i class="fab fa-facebook"></i></a>
+            </div>
+            <address class="address">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>
+                    <a href="#" class="location icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Buenos Aires, Argentina</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="#" class="whatsapp icon">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="phone">+5455555505</span>
+                    </a>
+                </p>
+            </address>
+        </div>
+        <div class="copyright">
+            <p>Made by Yuniski Duran 🐻 with <span class="heart">❤</span> ©2021 
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function hide() {
+            var form = document.getElementById("my-form");
+            form.style.display = "none";
+
+            var message = document.getElementById("message");
+            message.style.display = "block"
+        }
+    </script>
+</body>
+</html>
